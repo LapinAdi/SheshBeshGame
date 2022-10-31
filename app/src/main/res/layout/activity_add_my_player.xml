@@ -17,7 +17,8 @@
             android:id="@+id/btnPlayerBack"
             android:layout_width="wrap_content"
             android:layout_height="71dp"
-            android:backgroundTint="@color/material_dynamic_neutral10"
+            tools:ignore="SpeakableTextPresentCheck" />
+         <!--   android:backgroundTint="@color/material_dynamic_neutral10"-->
             android:text="back" />
 
         <TextView
@@ -67,11 +68,12 @@
             android:layout_height="106dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:backgroundTint="@color/material_dynamic_neutral10"
-            android:text="PLAY!"
-            android:textColorLink="#2F2323"
-            android:textSize="50sp" />
+            tools:ignore="SpeakableTextPresentCheck" />
+        <!--     android:backgroundTint="@color/material_dynamic_neutral10" -->//
+             android:text="PLAY!"
+             android:textColorLink="#2F2323"
+             android:textSize="50sp" />
 
-    </LinearLayout>
+     </LinearLayout>
 
-</LinearLayout>
+ </LinearLayout>
