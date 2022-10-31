@@ -13,33 +13,28 @@ import android.widget.EditText;
 
 import java.util.Locale;
 
-public class AddPlayer extends AppCompatActivity implements View.OnClickListener {
-
+public class AddMyPlayer extends AppCompatActivity implements View.OnClickListener {
 
     // שלב א - הגדרת הרכיבים שנרצה לתכנת
 
     private Button btnPlay,      //כפתור
             btnAddBack;          //
 
-    private EditText  etName1,  //
+    private EditText etName1,  //
             etName2;            //
 
 
     private TextToSpeech textToSpeech; //כשעוברים למסך הבא  מופעל רמקול שאומר את השמות
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_player);
-
-
+        setContentView(R.layout.activity_add_my_player);
 
         // שלב ב - קישור לרכיבים במסך
 
         btnPlay=(Button) findViewById(R.id.btnPlay);
-        btnAddBack=(Button) findViewById(R.id.btnUserBack);
+        btnAddBack=(Button) findViewById(R.id.btnPlayerBack);
 
         etName1=(EditText) findViewById(R.id.etName1);
         etName2=( EditText) findViewById(R.id.etName2);
@@ -59,15 +54,8 @@ public class AddPlayer extends AppCompatActivity implements View.OnClickListener
 
     }
 
-
-
-    //שלב ג - מעבר בין ADD PLAYER לדף של משחק הזיכרון
-    // מעביר את שמות המשתמשים למשחק (כמו תיבת דואר )
-
-
     @Override
-    public void onClick(View v)
-    {
+    public void onClick(View v) {
         if(v.getId()==btnPlay.getId())
         {
             Intent intent=new Intent(this, MainActivity.class);
@@ -98,6 +86,8 @@ public class AddPlayer extends AppCompatActivity implements View.OnClickListener
                 intent.putExtra("DATA2", name2);
 
                 startActivity(intent);
+
+
             }
 
 
@@ -105,5 +95,8 @@ public class AddPlayer extends AppCompatActivity implements View.OnClickListener
 
 
 
+        } else if (v.getId()==btnAddBack.getId()){
+            finish();
         }
-    }}
+    }
+}

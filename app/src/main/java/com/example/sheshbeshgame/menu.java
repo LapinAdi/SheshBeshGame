@@ -19,12 +19,13 @@ public class menu extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_menu);
 
         btnPlay = findViewById(R.id.buttonPlayMenu);
+        btnPlay.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if (v.getId() == btnPlay.getId()) {     //   מעביר מעמוד תפריט לעמוד הוספת שחקן
-            Intent intent = new Intent(this, AddPlayer.class);
+            Intent intent = new Intent(this, AddMyPlayer.class);
 
             startActivity(intent);
         }
