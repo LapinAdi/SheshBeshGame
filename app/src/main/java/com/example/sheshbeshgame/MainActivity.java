@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity  {
         tvName1 = (TextView) findViewById(R.id.tvName1);
         tvName2 = (TextView) findViewById(R.id.tvName2);
 
-        // ------------------------------------------
+        // ----------------------------------------------
         Intent in = getIntent();
         if (in != null) {
             Bundle xtras = in.getExtras();
