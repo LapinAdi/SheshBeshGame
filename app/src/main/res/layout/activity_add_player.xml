@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/br1"
+    tools:context=".AddPlayer">
+
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/btnUserBack"
+            android:layout_width="wrap_content"
+            android:layout_height="71dp"
+            android:backgroundTint="@color/material_dynamic_neutral10"
+            android:text="back" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_gravity="center"
+            android:background="#8A8EA9"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Players Name"
+            android:textColor="#040304"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/etName1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="#8A8EA9"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:hint="הכנס שם שחקן 1"
+            android:inputType="textPersonName"
+            android:textColor="#060404" />
+        //לזכור את זה זה חשוב
+
+        <EditText
+            android:id="@+id/etName2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="#8A8EA9"
+            android:ems="10"
+            android:hint="הכן שם שחקן 2"
+            android:inputType="textPersonName"
+            android:textColor="#000000" />
+        // לזכור את זה זה חשוב
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="@color/material_dynamic_neutral10"
+            android:text="PLAY!"
+            android:textColorLink="#2F2323"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
