@@ -15,6 +15,20 @@ import java.util.Locale;
 
 public class AddPlayer extends AppCompatActivity implements View.OnClickListener {
 
+
+    // שלב א - הגדרת הרכיבים שנרצה לתכנת
+
+    private Button btnPlay,      //כפתור
+            btnAddBack;          //
+
+    private EditText  etName1,  //
+            etName2;            //
+
+
+    private TextToSpeech textToSpeech; //כשעוברים למסך הבא  מופעל רמקול שאומר את השמות
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,17 +59,6 @@ public class AddPlayer extends AppCompatActivity implements View.OnClickListener
 
     }
 
-
-    // שלב א - הגדרת הרכיבים שנרצה לתכנת
-
-    private Button btnPlay,      //כפתור
-            btnAddBack;          //
-
-    private EditText  etName1,  //
-            etName2;            //
-
-
-    private TextToSpeech textToSpeech; //כשעוברים למסך הבא  מופעל רמקול שאומר את השמות
 
 
     //שלב ג - מעבר בין ADD PLAYER לדף של משחק הזיכרון

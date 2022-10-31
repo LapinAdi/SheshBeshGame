@@ -27,7 +27,7 @@
             android:textSize="34sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/buttonPlayMenu"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginLeft="50dp"
