@@ -18,8 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="71dp"
             tools:ignore="SpeakableTextPresentCheck" />
-         <!--   android:backgroundTint="@color/material_dynamic_neutral10"-->
-            android:text="back" />
+        <!--   android:backgroundTint="@color/material_dynamic_neutral10"-->
+        android:text="back" />
 
         <TextView
             android:id="@+id/textView"
@@ -48,6 +48,12 @@
             android:inputType="textPersonName"
             android:textColor="#060404" />
 
+        <Button
+            android:id="@+id/btnContact1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
         <EditText
             android:id="@+id/etName2"
             android:layout_width="match_parent"
@@ -63,17 +69,22 @@
             android:textColor="#000000" />
 
         <Button
+            android:id="@+id/btnContact2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <Button
             android:id="@+id/btnPlay"
             android:layout_width="match_parent"
             android:layout_height="106dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
+            android:text="PLAY!"
+            android:textColorLink="#2F2323"
+            android:textSize="50sp"
             tools:ignore="SpeakableTextPresentCheck" />
-        <!--     android:backgroundTint="@color/material_dynamic_neutral10" -->//
-             android:text="PLAY!"
-             android:textColorLink="#2F2323"
-             android:textSize="50sp" />
 
-     </LinearLayout>
+    </LinearLayout>
 
- </LinearLayout>
+</LinearLayout>
