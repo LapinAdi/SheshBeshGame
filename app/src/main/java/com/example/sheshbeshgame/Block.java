@@ -71,7 +71,7 @@ import android.widget.LinearLayout;
                 else
                 {
                     iv.setImageResource(R.drawable.p2);
-
+//
                     this.addView(iv);
                 }
 
