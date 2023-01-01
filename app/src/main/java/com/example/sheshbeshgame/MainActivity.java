@@ -17,16 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
     //  add player שלב א הגדרת רכיבים
     private String name1,
-    name2;
+            name2;
 
     private TextView tvName1, tvName2;
     private Button btnUserBack;
 
     private LinearLayout verticalLayout1, verticalLayout2;
-    private final int[] stoneArragnement = new int[]{5, 0, 0, 0, -3, 0, -5, 0, 0, 0, 0, 2, -5, 0, 0, 0, 3, 0, 5, 0,0,0,0,-2};
-    private final int[] margin = new int[]{0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0};
+    private final int[] stoneArragnement = new int[]{5, 1, 1, 1, -3, 1, -5, 1, -4 , 1, -1, 2, -5, 1, 1, 1, 3, -1, 5, -1, -1, -1, -1, -2};
+    private final int[] margin = new int[]{0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0};
     private Block[] blocks;
-
 
 
     final int LEN = 24;
@@ -65,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
         tvName2.setText(name2);
         //---------------------------------------
 
-        blocks= createBlockStone(blocks);
+        blocks = createBlockStone(blocks);
 
     }
 
-    public Block[] createBlockStone( Block [] blocks) {
+    public Block[] createBlockStone(Block[] blocks) {
         //
         //
 
@@ -79,70 +78,63 @@ public class MainActivity extends AppCompatActivity {
                     stoneArragnement[i] > 0 ? 'w' : 'b');
 
 
-            if(i>11){
-                LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lnp.setMargins(0, 0, 0, dpToPixel(10));
+            if (i > 11) {
+//
 
-
-
-
-                blocks[i].setLayoutParams(lnp);
                 blocks[i].setGravity(Gravity.RIGHT);
+
+                if (i == 12) {
+                    doMargtopScreen(i);
+                } else {
+                    doMargBottomUsual(i);
+                }
+
+            } else {
+                doMargBottomUsual(i);
+                if (i == 0) {
+                    doMargtopScreen(i);
+                }
+
             }
-            else{
-                LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lnp.setMargins(0, 0, 0, dpToPixel(10));
-                blocks[i].setLayoutParams(lnp);
-
-
-            }
-
-
-
-
 
 
             if (i == 5 || i == 17) {
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lp.setMargins(0, 0, 0, dpToPixel(40));
-                blocks[i].setLayoutParams(lp);
+              doMargtopMiddleScreen(i);
             }
+
+
 
             correctLayout.addView(blocks[i]);
             if (i == 11) reverse11();
 
-            if ( i==11|| i==12){
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lp.setMargins(0, dpToPixel(25),0, 0);
-                blocks[i].setLayoutParams(lp);
-            }
-
-
 
         }
 
-        return  blocks;
+        return blocks;
     }
 
-    private  void  doMargBottom( int marg,int i){
+    private void doMargBottomUsual(int i) {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 0,0, dpToPixel(marg));
-        blocks[i].setLayoutParams(lp);
-
-    }
-    private  void  doMargtop( int marg,int i){
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 0,0, dpToPixel(marg));
+        lp.setMargins(0, 0, 0, 50);
         blocks[i].setLayoutParams(lp);
 
     }
 
+    private void doMargtopScreen(int i) {
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(0, 70, 0, 50);
+        blocks[i].setLayoutParams(lp);
+
+    }
+    private void doMargtopMiddleScreen(int i) {
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(0, 0, 0, 170);
+        blocks[i].setLayoutParams(lp);
+
+    }
 
 
     private LinearLayout findLayout(int row) {

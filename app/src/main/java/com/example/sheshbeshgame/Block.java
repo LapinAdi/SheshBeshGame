@@ -59,6 +59,9 @@ import android.widget.LinearLayout;
                 if(this._color=='b')
                 {
                     iv.setImageResource(R.drawable.p1);
+                    LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
+                            100, 100 );
+                    iv.setLayoutParams(lnp);
                     //    iv.setVisibility(VISIBLE);
                    // iv.setMaxWidth(10);
                    // iv.setMaxHeight(10);
@@ -71,7 +74,9 @@ import android.widget.LinearLayout;
                 else
                 {
                     iv.setImageResource(R.drawable.p2);
-//
+                    LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
+                            100, 100);
+                    iv.setLayoutParams(lnp);
                     this.addView(iv);
                 }
 
