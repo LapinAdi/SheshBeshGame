@@ -52,34 +52,40 @@ import android.widget.LinearLayout;
                 iv.setVisibility(INVISIBLE);
                 this.addView(iv);
             }
+            else{
+
+                for(int i=0;i<this._stoneNum;i++){
+                    ImageView iv= new ImageView(this.getContext());
+                    if(this._color=='b')
+                    {
+                        iv.setImageResource(R.drawable.p1);
+                        LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
+                                100, 100 );
+                        iv.setLayoutParams(lnp);
+                        //    iv.setVisibility(VISIBLE);
+                        // iv.setMaxWidth(10);
+                        // iv.setMaxHeight(10);
 
 
-            for(int i=0;i<this._stoneNum;i++){
-                ImageView iv= new ImageView(this.getContext());
-                if(this._color=='b')
-                {
-                    iv.setImageResource(R.drawable.p1);
-                    LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
-                            100, 100 );
-                    iv.setLayoutParams(lnp);
-                    //    iv.setVisibility(VISIBLE);
-                   // iv.setMaxWidth(10);
-                   // iv.setMaxHeight(10);
+                        this.addView(iv);
+                        System.out.println(i + ": " + iv.getId());
 
+                    }
+                    else
+                    {
+                        iv.setImageResource(R.drawable.p2);
+                        LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
+                                100, 100);
+                        iv.setLayoutParams(lnp);
+                        this.addView(iv);
+                    }
 
-                   this.addView(iv);
-                    System.out.println(i + ": " + iv.getId());
-
-                }
-                else
-                {
-                    iv.setImageResource(R.drawable.p2);
-                    LinearLayout.LayoutParams lnp = new LinearLayout.LayoutParams(
-                            100, 100);
-                    iv.setLayoutParams(lnp);
-                    this.addView(iv);
                 }
 
             }
+
+
+
+
         }
 }
